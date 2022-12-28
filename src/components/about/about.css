@@ -1,0 +1,107 @@
+.spacing{
+    padding-top: 8rem;
+}
+.about__container{
+    display: grid;
+    padding-top: 5vh;
+    grid-template-columns: 35% 50%;
+    gap: 15%;
+}
+
+.about__me{
+    margin-top: 5vh;
+    width: 100%;
+    height: fit-content;
+    border-radius: 5rem;
+    background: radial-gradient(var(--color-bg-variant), transparent);
+    display: grid;
+    place-items: center;
+    transform: rotate(10deg);
+    transition: var(--transition);
+}
+.bruh{
+    border-radius: 5rem;
+    overflow: hidden;
+    border: 5px solid var(--color-primary);
+    transition: var(--transition);
+}
+.bruh:hover{
+    border: 5px solid var(--color-white);
+}
+.about__me:hover{
+    background: radial-gradient(var(--color-primary), transparent);
+    transform: rotate(0deg);
+    box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
+}
+.about__cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.about__card{
+    background: linear-gradient(var(--color-bg-variant), transparent);
+    border-radius: 5rem;
+    border: 2px solid var(--color-primary);
+    padding: 2rem;
+    padding-bottom: 4rem;
+    text-align: center;
+    transition: var(--transition);
+}
+.about__icon{
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+.about__card:hover{
+    border: 2px solid var(--color-white);
+    box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
+}
+.about__card h5{
+    font-size: 1rem;
+    font-weight: 900;
+    color: rgb(218, 226, 218);
+}
+.about__card small{
+    font-size: 0.7rem;
+    color: var(--color-white);
+}
+
+.about__content p{
+    margin: 4rem 0 4rem;
+    color: var(--color-white);
+}
+
+/* FOR TABLETS */
+@media screen and (max-width: 1024px){
+    .about__container{
+        grid-template-columns: 1fr;
+        gap: 0;
+        padding-top: 0;
+    }
+    .about__me{
+        width: 50%;
+        margin: 2rem auto 4rem;
+    }
+    .about__content p{
+        margin: 1rem 0 1.5rem;
+    }
+}
+
+/* FOR PHONES */
+@media screen and (max-width: 600px){
+    .about__me{
+        width: 65%;
+        margin: 0 auto 3rem;
+    }
+    .about__cards{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .about__content{
+        text-align: center;
+    }
+    .about_content p{
+        margin: 1.5rem 0;
+    }
+}

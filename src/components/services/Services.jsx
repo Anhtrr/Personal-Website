@@ -3,7 +3,14 @@ import './services.css';
 
 const Services = () => {
   return (
-    <div>Services</div>
+    <section id='services'>
+      <article className="service">
+        <div className="service__head">
+          <h3>Analog</h3>
+        </div>
+        
+      </article>
+    </section>
   )
 }
 

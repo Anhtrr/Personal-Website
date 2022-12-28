@@ -1,0 +1,70 @@
+.spacing{
+    padding-top: 8rem;
+}
+.experience__container{
+    padding-top: 5vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem;
+}
+.experience__container > div{
+    background: radial-gradient(var(--color-bg-variant), transparent);
+    padding: 3rem 3rem 5rem 3rem;
+    border-radius: 4rem;
+    border: 5px solid var(--color-primary);
+    transition: var(--transition);
+}
+.experience__container > div:hover{
+    box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
+    border: 5px solid var(--color-white);
+    cursor: default;
+}
+.experience__container > div h3{
+    text-align: center;
+    margin-bottom: 5rem;
+    color: rgb(218, 226, 218);
+    font-weight: 900;
+}
+.experience__content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 4rem;
+    column-gap: 2rem;
+}
+.experience__details{
+    display: flex;
+    gap: 1rem;
+}
+.experienceIcons{
+    margin-top: 6px;
+    color: var(--color-primary);
+}
+
+/* FOR TABLETS */
+@media screen and (max-width: 1024px){
+    .experience__container{
+        grid-template-columns: 1fr;
+        padding-top: 0;
+    }
+    .experience__container > div{
+        width: 80%;
+        padding: 2rem;
+        margin: 0 auto;
+    }
+    .experience__content{
+        padding: 1rem;
+    }
+}
+
+/* FOR PHONES */
+@media screen and (max-width: 600px){
+    .experience__container{
+        gap: 1rem;
+        padding-top: 0;
+    }
+
+    .experience__container > div{
+        width: 100%;
+        padding: 2rem 1rem;
+    }
+}
