@@ -19,7 +19,7 @@ const Photo = () => {
       title: '"Light and Smoke" • 2021',
       format: 'Small',
       style: 'Portraiture • Shadow • Fog',
-      description: 'This collection of portraits was shot to explore how natural lighting can be utilized as photo objects themselves.'
+      description: 'This collection was shot to explore how natural lighting can be utilized as photo objects themselves.'
     },
     {
       display: c1,
