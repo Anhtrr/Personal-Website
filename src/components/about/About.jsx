@@ -6,7 +6,7 @@ import {FiBriefcase, FiCamera} from 'react-icons/fi'
 
 const About = () => {
   return (
-    <section id='about'>
+    <section className='aboutSec' id='about'>
       <h5 className='spacing'>ABOUT ME</h5>
       <h2>Anh D. Tran<h5>(Ah • ng)</h5></h2>
       <div className="container about__container">

@@ -7,7 +7,9 @@
     grid-template-columns: 35% 50%;
     gap: 15%;
 }
-
+.aboutSec{
+    min-height: 100vh;
+}
 .about__me{
     margin-top: 5vh;
     width: 100%;

@@ -38,7 +38,7 @@ const Photo = () => {
   ]
   
   return (
-    <section id='photo'>
+    <section className='photosec' id='photo'>
       <h5 className='spacing'>PHOTOGRAPHY</h5>
       <h2>My Photography Curations</h2>
       <Swiper className="container collections__container"

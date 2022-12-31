@@ -1,6 +1,9 @@
 .container.collections__container{
     width: 70%;
 }
+.photosec{
+    min-height: 100vh;
+}
 .collection{
     padding: 1rem;
     background: radial-gradient(var(--color-bg-variant) 60%, transparent);
