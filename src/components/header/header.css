@@ -9,11 +9,13 @@ header{
     height: 100%;
     position: relative;
 }
-
+.header__container h1{
+    color: rgb(218, 226, 218);
+}
 /*CTA*/
 
 .cta{
-    margin-top: 4rem;
+    margin-top: 5vh;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
@@ -30,10 +32,12 @@ header{
     left: 0;
     bottom: 3rem;
 }
-
+.header__socials a{
+    font-size: 2rem;
+}
 .header__socials::after{
     content: '';
-    width: 1px;
+    width: 0.1rem;
     height: 2rem;
     background: var(--color-primary);
 }
@@ -76,10 +80,10 @@ header{
 .scroll__down{
     position: absolute;
     right: -2.3rem;
-    bottom: 5rem;
+    bottom: 7rem;
     transform: rotate(90deg);
     font-weight: 500;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
 }
 
 /* FOR TABLETS */

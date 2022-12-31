@@ -4,7 +4,7 @@
 .experience__container{
     padding-top: 5vh;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 .experience__container > div{
@@ -35,9 +35,14 @@
     display: flex;
     gap: 1rem;
 }
+.experience__details h4{
+    font-size: 1.1rem;
+    color: rgb(218, 226, 218);
+}
 .experienceIcons{
     margin-top: 6px;
     color: var(--color-primary);
+    font-size: 1.5rem;
 }
 
 /* FOR TABLETS */

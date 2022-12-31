@@ -61,13 +61,15 @@ section{
     margin-top: 8rem;
 }
 
-section > h2, section > h5 {
+section > h5 {
     text-align: center;
-    color: var(--color-light);
+    color: var(--color-primary);
+    font-weight: 900;
 }
 
 section > h2 {
-    color: var(--color-primary);
+    text-align: center;
+    color: rgb(218, 226, 218);
     margin-bottom: 3rem;
 }
 

@@ -5,8 +5,8 @@ import About from './components/about/About'
 import Contact from './components/contact/Contact'
 import Experience from './components/experience/Experience'
 import Footer from './components/footer/Footer'
-import Portfolio from './components/portfolio/Portfolio'
-import Services from './components/services/Services'
+import Projects from './components/projects/Projects'
+import Photo from './components/photography/Photo'
 
 const App = () => {
   return (
@@ -15,8 +15,8 @@ const App = () => {
       <Nav/>
       <About/>
       <Experience/>
-      <Services/>
-      <Portfolio/>
+      <Projects/>
+      <Photo/>
       <Contact/>
       <Footer/>
     </>
