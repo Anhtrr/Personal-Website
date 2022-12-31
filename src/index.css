@@ -36,7 +36,7 @@ html{
 body{
     font-family: 'DM Sans', sans-serif;
     /* Background Color */
-    background: var(--color-bg);
+    background: radial-gradient(var(--color-bg) 90%, #373737);
     /* Text Color */
     color: var(--color-white);
     line-height: 1.7;
