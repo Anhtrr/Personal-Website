@@ -36,7 +36,7 @@ html{
 body{
     font-family: 'DM Sans', sans-serif;
     /* Background Color */
-    background: radial-gradient(var(--color-bg) 90%, #373737);
+    background: var(--color-bg);
     /* Text Color */
     color: var(--color-white);
     line-height: 1.7;
@@ -112,6 +112,10 @@ img{
     display: block;
     width: 100%;
     object-fit: cover;
+}
+
+Particle{
+    z-index: -10;
 }
 
 /* FOR TABLETS */

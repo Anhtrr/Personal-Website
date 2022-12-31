@@ -7,10 +7,14 @@ import Skills from './components/skills/Skills'
 import Footer from './components/footer/Footer'
 import Projects from './components/projects/Projects'
 import Photo from './components/photography/Photo'
+import Particle from './components/Particle'
 
 const App = () => {
+  
+
   return (
-    <>
+    <div>
+      <Particle/>
       <Header/>
       <Nav/>
       <About/>
@@ -19,7 +23,7 @@ const App = () => {
       <Photo/>
       <Contact/>
       <Footer/>
-    </>
+    </div>
   )
 }
 
