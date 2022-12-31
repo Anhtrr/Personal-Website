@@ -15,7 +15,7 @@
 
 .portfolio__item:hover{
     border-color: var(--color-white);
-    box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
+    box-shadow: 0rem 0rem 3rem var(--color-primary);
 }
 .portfolio__item:hover > h6{
     color:rgb(218, 226, 218);

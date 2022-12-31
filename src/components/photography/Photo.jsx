@@ -59,7 +59,7 @@ const Photo = () => {
           slideShadows: true,
         }}
         autoplay={{
-          delay: 4000,
+          delay: 6000,
           disableOnInteraction: true,
         }}
         rewind={true}

@@ -18,7 +18,7 @@
     border-radius: 3rem;
 }
 .pic:hover{
-    box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
+    box-shadow: 0rem 0rem 3rem var(--color-primary);
 }
 .picture{
     border-radius: 3rem;
@@ -39,12 +39,12 @@
     user-select: none;
 }
 :root {
-    --swiper-navigation-color: rgb(218, 226, 218);
+    --swiper-navigation-color: var(--color-white);
 }
 
 @media screen and (max-width: 1024px){
     .container.collections__container{
-        width: 60%;
+        width: 90%;
     }
     .picContent{
         padding: 0;

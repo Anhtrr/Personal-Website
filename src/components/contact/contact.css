@@ -1,0 +1,102 @@
+.container.contact__container{
+    width: 60%;
+    display: grid;
+    grid-template-columns: 30% 60%;
+    gap: 10%;
+}
+.contact__options{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.contact__option{
+    background: radial-gradient(var(--color-bg-variant), transparent);
+    padding: 1.2rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: 5px solid var(--color-primary);
+    transition: var(--transition);
+}
+.contact__option:hover{
+    border: 5px solid var(--color-white);
+    box-shadow: 0rem 0rem 2rem var(--color-primary);
+}
+.iconn{
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: rgb(218, 226, 218);
+}
+.contact__option a{
+    margin-top: 0.7rem;
+    display: inline-block;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    border: 2px solid var(--color-white);
+    border-radius: 1rem;
+    color: var(--color-white);
+}
+.contact__option h4{
+    color: rgb(218, 226, 218);
+}
+.formm{
+    border-radius: 2rem;
+    border: 5px solid var(--color-primary); 
+    height: fit-content;
+    margin-top: 25%;
+    background: radial-gradient(var(--color-bg-variant) 70%, transparent);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    padding-top: 3rem;
+}
+input, textarea{
+    width: 80%;
+    align-self: center;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    background: #1e1e1e;
+    color: rgb(218, 226, 218);
+    resize: none;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: var(--transition);
+    transition: 1s ease-out;
+}
+input:focus, textarea:focus{
+    box-shadow: 0rem 0rem 1.5rem var(--color-primary);
+}
+.formm .btn{
+    align-self: center;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    background-color: #1e1e1e;
+    color: var(--color-white);
+    border: 0;
+    border-radius: 1rem;
+    padding: 1.1rem;
+}
+::placeholder{
+    color: var(--color-white);
+    opacity: 0.8;
+}
+/* FOR TABLETS */
+@media screen and (max-width: 1024px){
+    .container.contact__container{
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .formm{
+        margin-top: 0; 
+    }
+}
+/* FOR PHONES */
+@media screen and (max-width: 600px){
+    .container.contact__container{
+        width: var(--container-width-sm);
+    }
+    .formm{
+        margin-top: 0; 
+    }
+}
