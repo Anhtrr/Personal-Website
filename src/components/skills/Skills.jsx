@@ -1,5 +1,5 @@
 import React from 'react';
-import './experience.css';
+import './skills.css';
 import {BsCheck2, BsCheck2All} from 'react-icons/bs'
 import {SiJavascript, SiCss3, SiHtml5, SiBootstrap, 
   SiReact, SiCplusplus, SiJava, SiPython, SiGoland, 
@@ -8,9 +8,9 @@ import {SiJavascript, SiCss3, SiHtml5, SiBootstrap,
   SiAdobephotoshop, SiAngularjs, SiGooglechrome} 
   from 'react-icons/si'
 
-const Experience = () => {
+const Skills = () => {
   return (
-    <section id='experience'>
+    <section id='skills'>
       
       <h5 className='spacing'>SKILLS</h5>
       <h2>My Coding Skills</h2>
@@ -374,4 +374,4 @@ const Experience = () => {
   )
 }
 
-export default Experience
+export default Skills

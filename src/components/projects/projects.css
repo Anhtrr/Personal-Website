@@ -17,7 +17,10 @@
     border-color: var(--color-white);
     box-shadow: 0.5rem 0.5rem 3rem var(--color-primary);
 }
-
+.portfolio__item:hover > h6{
+    color:rgb(218, 226, 218);
+    font-weight: 900;
+}
 .portfolio__item-image{
     border-radius: 1.5rem;
     border: 2px solid var(--color-primary);
