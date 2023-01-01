@@ -42,14 +42,14 @@
     border-radius: 2rem;
     border: 5px solid var(--color-primary); 
     height: fit-content;
-    margin-top: 25%;
+    margin-top: 20%;
     background: radial-gradient(var(--color-bg-variant) 70%, transparent);
 }
 form{
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    padding-top: 3rem;
+    padding-top: 2rem;
 }
 input, textarea{
     width: 80%;
@@ -76,6 +76,12 @@ input:focus, textarea:focus{
     border: 0;
     border-radius: 1rem;
     padding: 1.1rem;
+}
+.formm h3{
+    text-align: center;
+    margin-top: 2rem;
+    color: rgb(218, 226, 218);
+    font-weight: 900;
 }
 ::placeholder{
     color: var(--color-white);
