@@ -5,7 +5,8 @@ import {SiJavascript, SiCss3, SiHtml5, SiBootstrap,
   SiReact, SiCplusplus, SiJava, SiPython, SiGoland, 
   SiVisualstudiocode, SiGithub, SiMongodb, SiNumpy, 
   SiPandas, SiGoogle, SiNodedotjs, SiAdobelightroom,
-  SiAdobephotoshop, SiAngularjs, SiGooglechrome} 
+  SiAdobephotoshop, SiAngularjs, SiGooglechrome, 
+  SiConfluence, SiJirasoftware, SiSlack} 
   from 'react-icons/si'
 
 const Skills = () => {
@@ -144,6 +145,13 @@ const Skills = () => {
               </div>
             </article>
             <article className='experience__details'>
+              <SiSlack className='experienceIcons' />
+              <div>
+                <h4>Slack</h4>
+                <small className='text-light'>Fluent</small>
+              </div>
+            </article>
+            <article className='experience__details'>
               <SiGoogle className='experienceIcons' />
               <div>
                 <h4>Google BigQuery</h4>
@@ -154,6 +162,20 @@ const Skills = () => {
               <SiGooglechrome className='experienceIcons' />
               <div>
                 <h4>Chrome Extension</h4>
+                <small className='text-light'>Proficient</small>
+              </div>
+            </article>
+            <article className='experience__details'>
+              <SiConfluence className='experienceIcons' />
+              <div>
+                <h4>Confluence Wiki</h4>
+                <small className='text-light'>Proficient</small>
+              </div>
+            </article>
+            <article className='experience__details'>
+              <SiJirasoftware className='experienceIcons' />
+              <div>
+                <h4>Jira</h4>
                 <small className='text-light'>Proficient</small>
               </div>
             </article>

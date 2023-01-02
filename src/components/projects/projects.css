@@ -26,7 +26,9 @@
     border: 2px solid var(--color-primary);
     overflow: hidden;
 }
-
+.portfolio__item-image.git{
+    opacity: 0.8;
+}
 .portfolio__item h3{
     margin: 1rem 0.2rem 0.2rem;
     color: rgb(218, 226, 218);
