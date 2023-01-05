@@ -9,7 +9,7 @@
     background: radial-gradient(var(--color-bg-variant) 60%, transparent);
     border-radius: 3rem;
     border: 5px solid var(--color-white);
-    padding: 3rem;
+    
 }
 .pic{
     width: 85%;
@@ -38,7 +38,7 @@
     padding: 0.5rem 0 0.5rem 0;
 }
 .picContent{
-    padding: 0 5.5rem 0 5.5rem;
+    padding: 0 2rem 2rem 2rem;
     user-select: none;
 }
 :root {

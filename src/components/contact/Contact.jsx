@@ -23,7 +23,7 @@ const Contact = () => {
   
   return (
     <section id='contact'>
-      <h5 className='spacing'>CONTACT</h5>
+      <h5 className='spacing'>CONTACT ME</h5>
       <h2>My Contact Information</h2>
 
       <div className="container contact__container">

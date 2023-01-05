@@ -1,0 +1,70 @@
+.resume__container{
+    align-items: center;
+    text-align: center;
+    padding: 0 5rem 0 5rem;
+}
+.resume__container h5{
+    color: var(--color-primary);
+    font-weight: 900;
+}
+.pdfSection{
+    margin: 5rem 10rem 5rem 10rem;
+    border: 5px solid var(--color-primary);
+    border-radius: 3rem;
+    background: radial-gradient(var(--color-bg-variant) 70%, transparent);
+}
+.viewww{
+    margin: 5rem;
+    transition: var(--transition);
+}
+.viewww:hover{
+    box-shadow: 0rem 0rem 3rem var(--color-primary);
+}
+.viewww:hover .pdfSection{
+    border: 5px solid rgb(218, 226, 218);
+}
+.resumeButtons{
+    padding-top: 4rem;
+}
+.resumeButtons a{
+    margin: 0 1rem 0 1rem;
+}
+/* FOR TABLETS */
+@media screen and (max-width: 1024px){
+    .resume__container{
+        padding: 2rem 1rem 0 1rem;
+    }
+    .pdfSection{
+        margin: 1rem 2rem 1rem 2rem;
+        background: radial-gradient(var(--color-bg-variant) 50%, transparent);
+    }
+    .resumeButtons{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 4rem;
+    }
+}
+
+/* FOR PHONES */
+@media screen and (max-width: 600px){
+    .resume__container{
+        padding: 2rem 1rem 0 1rem;
+    }
+    .pdfSection{
+        margin: 1rem 2rem 1rem 2rem;
+        background: radial-gradient(var(--color-bg-variant) 50%, transparent);
+    }
+    .resumeButtons{
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 4rem;
+    }
+}
