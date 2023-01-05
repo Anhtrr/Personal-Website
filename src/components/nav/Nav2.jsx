@@ -13,7 +13,7 @@ const Nav2 = () => {
     <nav>
       <Link to='/' onClick={() => setActiveTab('/')} className={activeTab === '/' ? 'active' : ''}><FiHome/></Link>
       <Link to='/myResume#' onClick={() => setActiveTab('/myResume#')} className={activeTab === '/myResume#' ? 'active' : ''}><RiProfileLine/></Link>
-      <Link to='/' onClick={() => setActiveTab('#skills')} className={activeTab === '#skills' ? 'active' : ''}><RxCamera/></Link>
+      <Link to='/photography' onClick={() => setActiveTab('/photography')} className={activeTab === '/photography' ? 'active' : ''}><RxCamera/></Link>
     </nav>
   )
 }
