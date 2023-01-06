@@ -7,13 +7,13 @@ import {useState} from 'react'
 import {Link} from 'react-router-dom'
 
 const Nav3 = () => {
-  const [activeTab, setActiveTab] = useState('/photography');
+  const [activeTab, setActiveTab] = useState('/photography/0');
 
   return (
     <nav>
       <Link to='/' onClick={() => setActiveTab('/')} className={activeTab === '/' ? 'active' : ''}><FiHome/></Link>
       <Link to='/myResume' onClick={() => setActiveTab('/myResume')} className={activeTab === '/myResume' ? 'active' : ''}><RiProfileLine/></Link>
-      <Link to='/photography' onClick={() => setActiveTab('/photography')} className={activeTab === '/photography' ? 'active' : ''}><RxCamera/></Link>
+      <Link to='/photography/0' onClick={() => setActiveTab('/photography/0')} className={activeTab === '/photography/0' ? 'active' : ''}><RxCamera/></Link>
     </nav>
   )
 }

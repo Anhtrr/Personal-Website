@@ -10,6 +10,7 @@ import 'swiper/css';
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Link } from 'react-router-dom';
 
 
 const Photo = () => {
@@ -19,21 +20,24 @@ const Photo = () => {
       title: '"Light and Smoke" • 2021',
       format: 'Small',
       style: 'Portraiture • Shadow • Fog',
-      description: 'This collection was shot to explore how natural lighting can be utilized as photo objects themselves.'
+      description: 'This collection was shot to explore how natural lighting can be utilized as photo objects themselves.',
+      collection: '/photography/2'
     },
     {
       display: c1,
       title: '"Paris On Film" • 2022',
       format: 'Small',
       style: 'Portraiture',
-      description: 'This collection of portraits was shot in Paris, France. It intends to bring out the dreamy and vibrant moods of Parisian Sceneries as well as the beauty of my friends.'
+      description: 'This collection of portraits was shot in Paris, France. It intends to bring out the dreamy and vibrant moods of Parisian Sceneries as well as the beauty of my friends.',
+      collection: '/photography/1'
     },
     {
       display: c3,
       title: '"Motion" • 2019',
       format: 'Small, Medium',
       style: 'Long Exposure',
-      description: 'This collection consists of all my attempts at long exposure. I attempt to capture the concept of motion, through photographs.'
+      description: 'This collection consists of all my attempts at long exposure. I attempt to capture the concept of motion, through photographs.',
+      collection: '/photography/3'
     }
   ]
   
@@ -65,12 +69,12 @@ const Photo = () => {
         rewind={true}
         modules={[Navigation, Pagination, Scrollbar, A11y, EffectCoverflow, Autoplay]}
       >
-        {collections.map(({display, title, format, style, description}, index) =>{
+        {collections.map(({display, title, format, style, description, collection}, index) =>{
           return(
             <SwiperSlide key={index} className="collection">
               <h3 className='picTitle'>{title}</h3>
               <div className="pic">
-                <img className="picture" src={display} alt=""/>
+                <Link to={collection}><img className="picture" src={display} alt=""/></Link>
               </div>
               <div className="picContent">
                 <h4 className="label">Details</h4>
