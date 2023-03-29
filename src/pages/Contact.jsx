@@ -1,18 +1,18 @@
 import React from 'react'
-import Photo from '../components/photoII/Photo2'
+import Contactt from '../components/contact/Contact'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/footer/Footer'
 import Particle from '../components/Particle'
 
-const Photography = () => {
+const Contact = () => {
   return (
     <div>
         <Particle/>
         <Nav/>
-        <Photo/>
+        <Contactt/>
         <Footer/>
     </div>
   )
 }
 
-export default Photography
+export default Contact

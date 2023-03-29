@@ -1,18 +1,18 @@
 import React from 'react'
-import Photo from '../components/photoII/Photo2'
+import ViewPhotos from '../components/photoII/ViewPhotos'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/footer/Footer'
 import Particle from '../components/Particle'
 
-const Photography = () => {
+const ViewPhoto = () => {
   return (
     <div>
         <Particle/>
         <Nav/>
-        <Photo/>
+        <ViewPhotos/>
         <Footer/>
     </div>
   )
 }
 
-export default Photography
+export default ViewPhoto

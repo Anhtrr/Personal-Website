@@ -8,7 +8,7 @@ import proj from '../../assets/proj.jpg'
 const Projects = () => {
   return (
     <section id='projects'>
-      <h5 className='spacing'>PROJECTS</h5>
+      <h5 >PROJECTS</h5>
       <h2>My Coding Projects</h2>
       
       <div className="container portfolio__container">

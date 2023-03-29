@@ -1,18 +1,18 @@
 import React from 'react'
-import Photo from '../components/photoII/Photo2'
+import Gallery from '../components/photoII/Gallery'
 import Nav from '../components/nav/Nav'
 import Footer from '../components/footer/Footer'
 import Particle from '../components/Particle'
 
-const Photography = () => {
+const GalleryDisplay = () => {
   return (
     <div>
         <Particle/>
         <Nav/>
-        <Photo/>
+        <Gallery/>
         <Footer/>
     </div>
   )
 }
 
-export default Photography
+export default GalleryDisplay

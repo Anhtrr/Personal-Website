@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 const CTA = () => {
   return (
     <div className="cta">
-        <Link to='/myResume'className='btn'>MY RESUME</Link>
-        <a href="#contact" className='btn btn-primary'>CONTACT ME</a>
+        <Link to='/Resume'className='btn'>MY RESUME</Link>
+        <Link to="/Contact" className='btn btn-primary'>CONTACT ME</Link>
     </div>
   )
 }

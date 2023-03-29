@@ -1,5 +1,5 @@
 import React, {useState}  from 'react'
-import {Link} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom'
 import './nav.css';
 import {FiHome, FiUser} from 'react-icons/fi'
 import {BiWrench} from 'react-icons/bi'

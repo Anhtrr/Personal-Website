@@ -1,0 +1,86 @@
+.container.collections__container{
+    width: 90%;
+}
+.container.collections__container.spacing{
+    padding-top: 5rem;
+}
+.photosec{
+    min-height: 100vh;
+}
+.collection{
+    padding: 1rem;
+    background: radial-gradient(var(--color-bg-variant) 60%, transparent);
+    border-radius: 3rem;
+    border: 5px solid var(--color-white);
+}
+.PhotoII_button_set{
+    text-align: center;
+    padding-bottom: 5rem;
+}
+.PhotoII_button_set a{
+    margin: 1rem;
+}
+.pic{
+    width: 85%;
+    height: 80%;
+    margin: 0 auto 1rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    transition: var(--transition);
+    border-radius: 3rem;
+}
+.pic:hover{
+    box-shadow: 0rem 0rem 3rem var(--color-primary);
+}
+.picture{
+    border-radius: 3rem;
+    user-select: none;
+}
+.picTitle{
+    text-align: center;
+    color: rgb(218, 226, 218);
+    padding: 1rem 0 0 0;
+    user-select: none;
+}
+.label{
+    color: rgb(218, 226, 218);
+    padding: 0.5rem 0 0.5rem 0;
+}
+.picContent{
+    padding: 0 2rem 2rem 2rem;
+    user-select: none;
+}
+:root {
+    --swiper-navigation-color: var(--color-white);
+}
+
+@media screen and (max-width: 1024px){
+    .container.collections__container{
+        width: 90%;
+    }
+    .picContent{
+        padding: 0;
+    }
+    .pic{
+        border-radius: 2rem;
+    }
+    .picture{
+        border-radius: 2rem;
+    }
+}
+
+/* FOR PHONES */
+@media screen and (max-width: 600px){
+    .container.collections__container{
+        width: var(--container-width-sm);
+    }
+    .picContent{
+        padding: 0;
+    }
+    .pic{
+        border-radius: 1rem;
+    }
+    .picture{
+        border-radius: 1rem;
+    }
+}

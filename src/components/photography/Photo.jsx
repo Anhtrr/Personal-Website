@@ -1,5 +1,4 @@
 import React from 'react';
-import { useRef, useState } from "react";
 import './photo.css';
 import c1 from '../../assets/Curations/C1/main.jpeg'
 import c2 from '../../assets/Curations/C2/main.JPG'

@@ -42,7 +42,7 @@ const Nav = () => {
         <BsKeyboard/>
       </NavLink>
       <NavLink 
-        to='/Photography'
+        to='/Photography/PhotoII'
         exact="true"
         activeclassname="Photography"
       >
