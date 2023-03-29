@@ -1,7 +1,13 @@
 import React from 'react'
-import Home from './Home'
-import Resume from './Resume'
-import Photography from './Photography'
+import Home from './pages/Home'
+import Resume from './pages/Resume'
+import About from './pages/About'
+import Skills from './pages/Skills'
+import Projects from './pages/Projects'
+import Contact from './components/contact/Contact'
+import Photography from './pages/Photography'
+import Photographyy from './Photography'
+import PhotoII from './pages/PhotoII'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 const App = () => {
@@ -10,9 +16,14 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/myResume" element={<Resume/>}/>
-        <Route path="/photography" element={<Photography/>}/>
-        <Route path="/photography/:collection" element={<Photography/>}/>
+        <Route path="/About" element={<About />}/>
+        <Route path="/Skills" element={<Skills />}/>
+        <Route path="/Projects" element={<Projects />}/>
+        <Route path="/Photography" element={<Photography />}/>
+        <Route path="/Contact" element={<Contact />}/>
+
+        <Route path="/Resume" element={<Resume/>}/>
+        <Route path="/photography/:collection" element={<Photographyy/>}/>
         <Route path="*" element={ <Navigate to ='/'/> }/>
       </Routes>
     </BrowserRouter>

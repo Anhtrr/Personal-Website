@@ -1,19 +1,20 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 import {RiLinkedinLine, RiInstagramLine, RiGithubLine} from 'react-icons/ri'
 
 const Footer = () => {
   return (
     <footer>
-      <a href="#" className='footer__logo'>ANHTRR</a>
+      <Link to="/" className='footer__logo'>ANHTRR</Link>
 
       <ul className='permalinks'>
-        <li><a className='permalink' href="#">HOME</a></li>
-        <li><a className='permalink' href="#about">ABOUT</a></li>
-        <li><a className='permalink' href="#skills">SKILLS</a></li>
-        <li><a className='permalink' href="#projects">PROJECTS</a></li>
-        <li><a className='permalink' href="#photo">PHOTOGRAPHY</a></li>
-        <li><a className='permalink' href="#contact">CONTACT</a></li>
+        <li><Link className='permalink' to="/">HOME</Link></li>
+        <li><Link className='permalink' to="/About">ABOUT</Link></li>
+        <li><Link className='permalink' to="/Skills">SKILLS</Link></li>
+        <li><Link className='permalink' to="/Projects">PROJECTS</Link></li>
+        <li><Link className='permalink' to="/Photography">PHOTOGRAPHY</Link></li>
+        <li><Link className='permalink' to="/Contact">CONTACT</Link></li>
       </ul>
 
       <div className="footer__socials">

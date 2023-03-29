@@ -1,5 +1,6 @@
 import React from 'react';
 import './nav.css';
+import {NavLink} from 'react-router-dom'
 import {FiHome, FiUser} from 'react-icons/fi'
 import {BiWrench} from 'react-icons/bi'
 import {MdOutlinePermContactCalendar} from 'react-icons/md'
@@ -12,12 +13,48 @@ const Nav = () => {
 
   return (
     <nav>
-      <a href='#' onClick={() => setActiveTab('#')} className={activeTab === '#' ? 'active' : ''}><FiHome/></a>
-      <a href='#about' onClick={() => setActiveTab('#about')} className={activeTab === '#about' ? 'active' : ''}><FiUser/></a>
-      <a href='#skills'onClick={() => setActiveTab('#skills')} className={activeTab === '#skills' ? 'active' : ''}><BiWrench/></a>
-      <a href='#projects'onClick={() => setActiveTab('#projects')} className={activeTab === '#projects' ? 'active' : ''}><BsKeyboard/></a>
-      <a href='#photo'onClick={() => setActiveTab('#photo')} className={activeTab === '#photo' ? 'active' : ''}><RxCamera/></a>
-      <a href='#contact'onClick={() => setActiveTab('#contact')} className={activeTab === '#contact' ? 'active' : ''}><MdOutlinePermContactCalendar/></a>
+      <NavLink 
+        to='/'
+        exact="true"
+        activeclassname="Home"
+      >
+        <FiHome/>
+      </NavLink>
+      <NavLink 
+        to='/About'
+        exact="true"
+        activeclassname="About"
+      >
+        <FiUser/>
+      </NavLink>
+      <NavLink 
+        to='/Skills'
+        exact="true"
+        activeclassname=""
+      >
+        <BiWrench/>
+      </NavLink>
+      <NavLink 
+        to='/Projects'
+        exact="true"
+        activeclassname="Projects"
+      >
+        <BsKeyboard/>
+      </NavLink>
+      <NavLink 
+        to='/Photography'
+        exact="true"
+        activeclassname="Photography"
+      >
+        <RxCamera/>
+      </NavLink>
+      <NavLink 
+        to='/Contact'
+        exact="true"
+        activeclassname="Contact"
+      >
+        <MdOutlinePermContactCalendar/>
+      </NavLink>
     </nav>
   )
 }
