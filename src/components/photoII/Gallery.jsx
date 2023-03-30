@@ -10,7 +10,8 @@ const Gallery = () => {
   const collectionTitle = getCollectionTitle.Collection
   const [collection, setCollection] = useState({})
   const [photos, setPhotos] = useState([])
-  const navigate = useNavigate()
+  const [viewActive, setActive] = useState(false)
+  const [activePhoto, setActivePhoto] = useState("")
   
   useEffect(() => {
     const getCollectionPhotos = () => {
@@ -34,48 +35,168 @@ const Gallery = () => {
     getCollectionPhotos()
   }, [])
   
-  const handleClick = (id) => {
-    if(collection.title === "All Photos"){
-        navigate(`/Photography/PhotoII/Photos/All/${id}`)
+  const handleClick = (index) => {
+    setActivePhoto(index)
+    setActive(true)
+  }
+  const handleCloseView = () => {
+    setActivePhoto("")
+    setActive(false)
+  }
+  const handleNextClick = () => {
+    if(activePhoto === photos.length-1){
+        setActivePhoto(0)
     }
     else{
-        navigate(`/Photography/PhotoII/Photos/${collection.title.trim()}/${id}`)
+        const newActive = activePhoto+1
+        setActivePhoto(newActive)
+    }
+  }
+  const handlePrevClick = () => {
+    if(activePhoto === 0){
+        setActivePhoto(photos.length-1)
+    }
+    else{
+        const newActive = activePhoto-1
+        setActivePhoto(newActive)
     }
   }
 
   return (
     <section className='photoIIGallery'>
-        {collection && (
-            <>
-                <div className="headingss">
-                    {collection.title === "All Photos" && (
-                        <h1 className='titlee'>{collection.title}</h1>
-                    )}
-                    {collection.title !== "All Photos" && (
-                        <h1 className='titlee'>"{collection.title}"</h1>
-                    )}
-                    <h4 className='descriptionn'>{collection.description}</h4>
-                </div>
-                <div style={{paddingTop: '2rem', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '2rem'}}>
-                    <ResponsiveMasonry
-                        columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
-                    >
-                        <Masonry
-                            gutter='1rem'
+        {viewActive === false && (
+            <div>
+            {collection && (
+                <>
+                    <div className="headingss">
+                        {collection.title === "All Photos" && (
+                            <h1 className='titlee'>{collection.title}</h1>
+                        )}
+                        {collection.title !== "All Photos" && (
+                            <h1 className='titlee'>"{collection.title}"</h1>
+                        )}
+                        <h4 className='descriptionn'>{collection.description}</h4>
+                    </div>
+                    <div style={{paddingTop: '2rem', paddingLeft: '1rem', paddingRight: '1rem', paddingBottom: '2rem'}}>
+                        <ResponsiveMasonry
+                            columnsCountBreakPoints={{350: 1, 750: 2, 900: 3}}
                         >
-                            {photos.map(photo =>(
-                                <img
-                                    key={photo.id}
-                                    src={photo.imagePath}
-                                    style={{width: "100%", display: "block", cursor: "pointer"}}
-                                    alt=""
-                                    onClick={() => handleClick(photo.id)}
-                                />
-                            ))}
-                        </Masonry>
-                    </ResponsiveMasonry>
+                            <Masonry
+                                gutter='1rem'
+                            >
+                                {photos.map((photo, index) =>(
+                                    <img
+                                        key={photo.id}
+                                        src={photo.imagePath}
+                                        style={{width: "100%", display: "block", cursor: "pointer"}}
+                                        alt=""
+                                        onClick={() => handleClick(index)}
+                                    />
+                                ))}
+                            </Masonry>
+                        </ResponsiveMasonry>
+                    </div>
+                </>
+            )}
+            </div>
+        )}
+        {viewActive === true && (
+            <div>
+                {activePhoto !== "" && (
+                    <div className="container viewPhoto__container">
+                    {photos && (
+                        <>
+                        <div className="titleAndCloseButton">
+                            <h1 className="photoTitle">"{photos[activePhoto].title}"</h1>
+                            <button className='btn' onClick={() => handleCloseView()}>X</button>
+                        </div>
+                        
+                        <div className="photoII_photo">
+                            <img src={photos[activePhoto].imagePath} alt="" />
+                        </div>
+
+                        <div className="photoII_photoInfoCard">
+                            <button className='btn btn-primary btn-prev' onClick={() => handlePrevClick()}>{"<"}</button>
+                            <div className="infooo">
+                            <h2 className='photoInfoHeading'>MORE INFORMATION</h2>
+                            {photos[activePhoto].about.format === "Film" && (
+                                <>
+                                    <div className="photoCategories">
+                                        <h4>FORMAT: </h4>
+                                        <p>Analog</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>CAMERA BODY: </h4>
+                                        <p>{photos[activePhoto].about.body}</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>FILM USED: </h4>
+                                        <p>{photos[activePhoto].about.film}</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>LENS: </h4>
+                                        <p>{photos[activePhoto].about.lens}</p>
+                                    </div>
+                                    
+                                    <div className="photoSettingsInformation">
+                                        <div className="photoSettingsCategories">
+                                            <h4>SHUTTER SPEED: </h4>
+                                            <p>{photos[activePhoto].about.shutterSpeed}s</p>
+                                        </div>
+                                        <div className="photoSettingsCategories">
+                                            <h4>APERATURE: </h4>
+                                            <p>f{photos[activePhoto].about.aperature}</p>
+                                        </div>
+                                        <div className="photoSettingsCategories">
+                                            <h4>ISO: </h4>
+                                            <p>{photos[activePhoto].about.iso}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
+                            {photos[activePhoto].about.format === "Digital" && (
+                                <>
+                                    <div className="photoCategories">
+                                        <h4>FORMAT: </h4>
+                                        <p>{photos[activePhoto].about.format}</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>CAMERA BODY: </h4>
+                                        <p>{photos[activePhoto].about.body}</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>CAMERA SENSOR: </h4>
+                                        <p>{photos[activePhoto].about.sensor}</p>
+                                    </div>
+                                    <div className="photoCategories">
+                                        <h4>LENS: </h4>
+                                        <p>{photos[activePhoto].about.lens}</p>
+                                    </div>
+        
+                                    <div className="photoSettingsInformation">
+                                        <div className="photoSettingsCategories">
+                                            <h4>SHUTTER SPEED: </h4>
+                                            <p>{photos[activePhoto].about.shutterSpeed}s</p>
+                                        </div>
+                                        <div className="photoSettingsCategories">
+                                            <h4>APERATURE: </h4>
+                                            <p>f{photos[activePhoto].about.aperature}</p>
+                                        </div>
+                                        <div className="photoSettingsCategories">
+                                            <h4>ISO: </h4>
+                                            <p>{photos[activePhoto].about.iso}</p>
+                                        </div>
+                                    </div>
+                                </>
+                            )}
+                            </div>
+                            <button className='btn btn-primary btn-next' onClick={() => handleNextClick()}>{">"}</button>
+                        </div>
+                    </>
+                    )}
                 </div>
-            </>
+                )}
+            </div>
         )}
     </section>
   )

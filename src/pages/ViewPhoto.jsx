@@ -7,7 +7,7 @@ import Particle from '../components/Particle'
 const ViewPhoto = () => {
   return (
     <div>
-        <Particle/>
+        
         <Nav/>
         <ViewPhotos/>
         <Footer/>

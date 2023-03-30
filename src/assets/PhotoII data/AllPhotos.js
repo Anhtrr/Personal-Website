@@ -12,7 +12,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 1600
         }
@@ -28,7 +28,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/8,
+            "shutterSpeed": "1/8",
             "aperature": 9.5,
             "iso": 100
         }
@@ -44,7 +44,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 5,
+            "shutterSpeed": "5",
             "aperature": 5.6,
             "iso": 1600
         }
@@ -60,7 +60,7 @@ const AllPhotos = [
             "body": "Mamiya RB67",
             "sensor": "None",
             "lens": "Sekor C 127mm 3.8",
-            "shutterSpeed": 15,
+            "shutterSpeed": "15",
             "aperature": 11,
             "iso": 400
         }
@@ -76,7 +76,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/30,
+            "shutterSpeed": "1/30",
             "aperature": 2.0,
             "iso": 3200
         }
@@ -92,7 +92,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/1000,
+            "shutterSpeed": "1/1000",
             "aperature": 1.4,
             "iso": 400
         }
@@ -108,7 +108,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 15,
+            "shutterSpeed": "15",
             "aperature": 5.6,
             "iso": 800
         }
@@ -124,7 +124,7 @@ const AllPhotos = [
             "body": "Mamiya RB67",
             "sensor": "None",
             "lens": "Sekor C 127mm 3.8",
-            "shutterSpeed": 1/60,
+            "shutterSpeed": "1/60",
             "aperature": 3.8,
             "iso": 400
         }
@@ -140,7 +140,7 @@ const AllPhotos = [
             "body": "Mamiya RB67",
             "sensor": "None",
             "lens": "Sekor C 127mm 3.8",
-            "shutterSpeed": 1/400,
+            "shutterSpeed": "1/400",
             "aperature": 3.8,
             "iso": 400
         }
@@ -156,7 +156,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 30,
+            "shutterSpeed": "30",
             "aperature": 8,
             "iso": 800
         }
@@ -172,7 +172,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Nokton 50mm 1.5",
-            "shutterSpeed": 1/1000,
+            "shutterSpeed": "1/1000",
             "aperature": 4.0,
             "iso": 200
         }
@@ -188,7 +188,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 2.0,
             "iso": 400
         }
@@ -204,7 +204,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Nokton 50mm 1.5",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 2.0,
             "iso": 160
         }
@@ -220,7 +220,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 1.4,
             "iso": 400
         }
@@ -236,7 +236,7 @@ const AllPhotos = [
             "body": "M6",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/60,
+            "shutterSpeed": "1/60",
             "aperature": 1.4,
             "iso": 400
         }
@@ -252,7 +252,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 1.4,
             "iso": 3200
         }
@@ -268,7 +268,7 @@ const AllPhotos = [
             "body": "M10-P",
             "sensor": "CMOS 24MP",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/1000,
+            "shutterSpeed": "1/1000",
             "aperature": 1.4,
             "iso": 1600
         }
@@ -284,7 +284,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 2.0,
             "iso": 1600
         }
@@ -300,7 +300,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/1000,
+            "shutterSpeed": "1/1000",
             "aperature": 1.4,
             "iso": 100
         }
@@ -316,7 +316,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 1.4,
             "iso": 400
         }
@@ -332,7 +332,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/60,
+            "shutterSpeed": "1/60",
             "aperature": 1.4,
             "iso": 1600
         }
@@ -348,7 +348,7 @@ const AllPhotos = [
             "body": "M6",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 400
         }
@@ -364,7 +364,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Nokton 50mm 1.5",
-            "shutterSpeed": 1/3000,
+            "shutterSpeed": "1/3000",
             "aperature": 1.5,
             "iso": 160
         }
@@ -380,7 +380,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 400
         }
@@ -396,7 +396,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 400
         }
@@ -412,7 +412,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 1.4,
             "iso": 800
         }
@@ -428,7 +428,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/60,
+            "shutterSpeed": "1/60",
             "aperature": 1.4,
             "iso": 800
         }
@@ -444,7 +444,7 @@ const AllPhotos = [
             "body": "M9",
             "sensor": "CCD 18MP",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 1600
         }
@@ -460,7 +460,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 800
         }
@@ -476,7 +476,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summmilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 800
         }
@@ -492,7 +492,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 800
         }
@@ -508,7 +508,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 1.4,
             "iso": 800
         }
@@ -524,7 +524,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/500,
+            "shutterSpeed": "1/500",
             "aperature": 1.4,
             "iso": 800
         }
@@ -540,7 +540,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/125,
+            "shutterSpeed": "1/125",
             "aperature": 2.0,
             "iso": 800
         }
@@ -556,7 +556,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 800
         }
@@ -572,7 +572,7 @@ const AllPhotos = [
             "body": "M3",
             "sensor": "None",
             "lens": "Summilux 35mm 1.4 ASPH FLE",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 800
         }
@@ -588,7 +588,7 @@ const AllPhotos = [
             "body": "M6",
             "sensor": "None",
             "lens": "Summilux 50mm 1.4 ASPH",
-            "shutterSpeed": 1/250,
+            "shutterSpeed": "1/250",
             "aperature": 1.4,
             "iso": 400
         }

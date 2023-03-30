@@ -7,9 +7,9 @@ import Particle from '../components/Particle'
 const GalleryDisplay = () => {
   return (
     <div>
-        <Particle/>
         <Nav/>
         <Gallery/>
+        <Particle/>
         <Footer/>
     </div>
   )

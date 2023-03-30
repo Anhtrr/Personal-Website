@@ -8,10 +8,10 @@ import Contact from './pages/Contact'
 import Photography from './pages/Photography'
 import Journal from './pages/Journal'
 import GalleryDisplay from './pages/GalleryDisplay'
-import ViewPhoto from './pages/ViewPhoto'
+//import ViewPhoto from './pages/ViewPhoto'
 //import Photographyy from './Photography'
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
-import Gallery from './components/photography/Gallery'
+//import Gallery from './components/photography/Gallery'
 
 const App = () => {
 
@@ -27,7 +27,6 @@ const App = () => {
         <Route path="/Photography/PhotoII/Journal" element={<Journal />}/>
         <Route path="/Photography/PhotoII/Photos" element={<GalleryDisplay />}/>
         <Route path="/Photography/PhotoII/Photos/:Collection" element={<GalleryDisplay />}/>
-        <Route path="/Photography/PhotoII/Photos/:Collection/:PhotoID" element={<ViewPhoto />}/>
         <Route path="/Resume" element={<Resume/>}/>
         {/* <Route path="/photography/:collection" element={<Photographyy/>}/> */}
         <Route path="*" element={ <Navigate to ='/'/> }/>

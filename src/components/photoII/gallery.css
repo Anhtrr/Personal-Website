@@ -16,9 +16,84 @@
 .photoIIGallery .descriptionn{
     text-align: center;
 }
+.container.viewPhoto__container .photoII_photo{
+    position: relative;
+    z-index: 2 ;
+    transition: 1s ease all;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border: 1px solid rgb(186, 186, 186);
+}
+.container.viewPhoto__container .photoII_photo:hover{
+    box-shadow: 0rem 0rem 3rem rgb(186, 186, 186);
+}
+.titleAndCloseButton{
+    display: grid;
+    grid-template-columns: 0.8fr 0.2fr;
+}
+.titleAndCloseButton .photoTitle{
+    padding-left: 2rem;
+    color: rgb(210, 210, 210);
+}
+.titleAndCloseButton button{
+    justify-self: end;
+    height: fit-content;
+    align-self: center;
+    font-weight: bolder;
+}
+.photoII_photoInfoCard{
+    display: grid;
+    grid-template-columns: 0.15fr 0.7fr 0.15fr;
+}
+.photoII_photoInfoCard .btn-prev, .photoII_photoInfoCard .btn-next{
+    height: fit-content;
+    font-weight: bolder;
+    align-self: center;
+}
+.photoII_photoInfoCard .btn-next{
+    justify-self: end;
+}
+.photoII_photoInfoCard .btn-prev{
+    justify-self: start;
+}
+.photoII_photoInfoCard .infooo{
+    justify-self: center;
+    border-radius: 2rem;
+    background: radial-gradient(var(--color-primary), transparent);
+    width: 90%;
+    padding: 1rem;
+    border: 2px solid rgb(186, 186, 186);
+    transition: 1s ease all;
+}
+.photoII_photoInfoCard .infooo:hover{
+    box-shadow: 0rem 0rem 3rem rgb(186, 186, 186);
+}
+.photoII_photoInfoCard .infooo .photoInfoHeading{
+    color: rgb(210, 210, 210);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.photoII_photoInfoCard .infooo .photoCategories{
+    padding-bottom: 0.7rem;
+    padding-left: 1rem;
+}
+.photoII_photoInfoCard .infooo .photoCategories p{
+    padding-left: 1rem;
+}
+.photoII_photoInfoCard .infooo .photoCategories h4, .photoII_photoInfoCard .infooo .photoSettingsInformation .photoSettingsCategories h4{
+    color: rgb(205, 205, 205);
+    font-weight: bolder;
+}
+.photoII_photoInfoCard .infooo .photoSettingsInformation{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 1rem;
+}
+.photoII_photoInfoCard .infooo .photoSettingsInformation .photoSettingsCategories{
+    justify-self: center;
+}
 
 @media screen and (max-width: 1024px){
-    
     .photoIIGallery .headingss{
         grid-template-columns: 1fr;
         gap: 1rem;
