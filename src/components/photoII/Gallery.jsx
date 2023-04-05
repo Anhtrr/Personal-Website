@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
+import { TbArrowAutofitHeight } from 'react-icons/tb'
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
+import { useOnKeyPress } from './useOnKeyPress'
 import AllCollections from '../../assets/PhotoII data/AllCollections'
 import AllPhotos from '../../assets/PhotoII data/AllPhotos'
+import { motion, AnimatePresence } from 'framer-motion'
 import './gallery.css'
+import { icons } from 'react-icons'
 
 const Gallery = () => {
   const getCollectionTitle = useParams()
@@ -11,7 +15,11 @@ const Gallery = () => {
   const [collection, setCollection] = useState({})
   const [photos, setPhotos] = useState([])
   const [viewActive, setActive] = useState(false)
-  const [activePhoto, setActivePhoto] = useState("")
+  const [fitScreenActive, setFitActive] = useState(false)
+  const [activePhoto, setActivePhoto] = useState(-1)
+
+  const [next, setNext] = useState(false)
+  const [prev, setPrev] = useState(false)
   
   useEffect(() => {
     const getCollectionPhotos = () => {
@@ -35,33 +43,38 @@ const Gallery = () => {
     getCollectionPhotos()
   }, [])
   
+  
   const handleClick = (index) => {
     setActivePhoto(index)
     setActive(true)
   }
   const handleCloseView = () => {
-    setActivePhoto("")
+    setFitActive(false)
     setActive(false)
   }
   const handleNextClick = () => {
+    setPrev(false)
+    setNext(true)
     if(activePhoto === photos.length-1){
         setActivePhoto(0)
     }
     else{
-        const newActive = activePhoto+1
-        setActivePhoto(newActive)
+        setActivePhoto(activePhoto+1)
     }
   }
   const handlePrevClick = () => {
+    setNext(false)
+    setPrev(true)
     if(activePhoto === 0){
         setActivePhoto(photos.length-1)
     }
     else{
-        const newActive = activePhoto-1
-        setActivePhoto(newActive)
+        setActivePhoto(activePhoto-1)
     }
   }
-
+  useOnKeyPress(handlePrevClick, 'ArrowLeft')
+  useOnKeyPress(handleCloseView, 'Escape')
+  useOnKeyPress(handleNextClick, 'ArrowRight')
   return (
     <section className='photoIIGallery'>
         {viewActive === false && (
@@ -101,21 +114,38 @@ const Gallery = () => {
             </div>
         )}
         {viewActive === true && (
+            <AnimatePresence mode={'wait'}>
             <div>
-                {activePhoto !== "" && (
+                {activePhoto !== -1 && (
                     <div className="container viewPhoto__container">
-                    {photos && (
+                    {photos[activePhoto] && (
                         <>
                         <div className="titleAndCloseButton">
-                            <h1 className="photoTitle">"{photos[activePhoto].title}"</h1>
+                            <motion.h1 className="photoTitle"
+                                initial={{opacity: 0}}
+                                animate={{opacity: 1}}
+                                transition={{duration: 1, delay: 0.5}}
+                                key={photos[activePhoto].title}
+                            >{activePhoto + 1}. - "{photos[activePhoto].title}"</motion.h1>
+                            <button className='btn btn-primary' onClick={() => setFitActive(!fitScreenActive)}><TbArrowAutofitHeight/></button>
                             <button className='btn' onClick={() => handleCloseView()}>X</button>
                         </div>
                         
-                        <div className="photoII_photo">
+                        <motion.div className={`photoII_photo ${fitScreenActive ? "" : "fit"}`}
+                            initial={{opacity: 0, y: `-10%`}}
+                            animate={{opacity: 1, y: '0%'}}
+                            transition={{duration: 0.3}}
+                            key={activePhoto}
+                        >
                             <img src={photos[activePhoto].imagePath} alt="" />
-                        </div>
+                        </motion.div>
 
-                        <div className="photoII_photoInfoCard">
+                        <motion.div className="photoII_photoInfoCard"
+                            initial={{opacity: 0}}
+                            animate={{opacity: 1}}
+                            transition={{duration: 1, delay: 0.5}}
+                            key={"photoII_photoInfoCard" + activePhoto}
+                        >
                             <button className='btn btn-primary btn-prev' onClick={() => handlePrevClick()}>{"<"}</button>
                             <div className="infooo">
                             <h2 className='photoInfoHeading'>MORE INFORMATION</h2>
@@ -191,12 +221,13 @@ const Gallery = () => {
                             )}
                             </div>
                             <button className='btn btn-primary btn-next' onClick={() => handleNextClick()}>{">"}</button>
-                        </div>
+                        </motion.div>
                     </>
                     )}
                 </div>
                 )}
             </div>
+            </AnimatePresence>
         )}
     </section>
   )

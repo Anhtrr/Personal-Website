@@ -16,6 +16,9 @@
 .photoIIGallery .descriptionn{
     text-align: center;
 }
+.container.viewPhoto__container{
+    padding-bottom: 4rem;
+}
 .container.viewPhoto__container .photoII_photo{
     position: relative;
     z-index: 2 ;
@@ -23,13 +26,24 @@
     margin-top: 3rem;
     margin-bottom: 3rem;
     border: 1px solid rgb(186, 186, 186);
+    transition: 1s ease all;
+}
+.container.viewPhoto__container .photoII_photo.fit{
+    max-height: 70vh;
+    justify-content: center;
+    background-color: rgb(186, 186, 186);
+}
+.container.viewPhoto__container .photoII_photo.fit img{
+    max-width: 100%;
+    max-height: 69vh;
+    object-fit: contain;
 }
 .container.viewPhoto__container .photoII_photo:hover{
     box-shadow: 0rem 0rem 3rem rgb(186, 186, 186);
 }
 .titleAndCloseButton{
     display: grid;
-    grid-template-columns: 0.8fr 0.2fr;
+    grid-template-columns: 0.8fr 0.1fr 0.1fr;
 }
 .titleAndCloseButton .photoTitle{
     padding-left: 2rem;
@@ -59,10 +73,10 @@
 .photoII_photoInfoCard .infooo{
     justify-self: center;
     border-radius: 2rem;
-    background: radial-gradient(var(--color-primary), transparent);
+    background: rgb(13, 13, 13);
     width: 90%;
     padding: 1rem;
-    border: 2px solid rgb(186, 186, 186);
+    border: 2px solid white;
     transition: 1s ease all;
 }
 .photoII_photoInfoCard .infooo:hover{
@@ -79,9 +93,10 @@
 }
 .photoII_photoInfoCard .infooo .photoCategories p{
     padding-left: 1rem;
+    color:rgb(182, 182, 182);
 }
 .photoII_photoInfoCard .infooo .photoCategories h4, .photoII_photoInfoCard .infooo .photoSettingsInformation .photoSettingsCategories h4{
-    color: rgb(205, 205, 205);
+    color: white;
     font-weight: bolder;
 }
 .photoII_photoInfoCard .infooo .photoSettingsInformation{
@@ -91,6 +106,9 @@
 }
 .photoII_photoInfoCard .infooo .photoSettingsInformation .photoSettingsCategories{
     justify-self: center;
+}
+.photoII_photoInfoCard .infooo .photoSettingsInformation .photoSettingsCategories p{
+    color: white;
 }
 
 @media screen and (max-width: 1024px){
